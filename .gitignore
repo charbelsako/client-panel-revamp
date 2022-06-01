@@ -1,4 +1,3 @@
 node_modules/
 # for now...only TODO: change this
-client/
-client/*
+.env
