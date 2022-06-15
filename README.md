@@ -68,6 +68,7 @@ Add/Edit a client
 - Email (String)
 - Phone (String)
 - isAdmin (Boolean)
+- Company Name (String)
 
 # Features
 
@@ -83,4 +84,7 @@ Add/Edit a client
 - Only the admin (myself) is capable of changing the _allow registration_ setting, the other settings are specific to users
 - Email Verification
 - Password Recovery
--
+- Export data to csv
+- Allow sub-accounts to be made and they can only access read only data (some data can be hidden maybe?)
+- Filter Clients by number of warnings, etc...
+- Sub accounts have to be managed by the parent and they can only be activated by them
