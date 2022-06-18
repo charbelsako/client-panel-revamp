@@ -88,3 +88,5 @@ Add/Edit a client
 - Allow sub-accounts to be made and they can only access read only data (some data can be hidden maybe?)
 - Filter Clients by number of warnings, etc...
 - Sub accounts have to be managed by the parent and they can only be activated by them
+- Clients can ask for projects and bills are per project, thus making it easier to show bill info (domain name cost, server cost, etc...)
+- Admin panel for the website owner (me) that can deactivate/delete/ban accounts for good
