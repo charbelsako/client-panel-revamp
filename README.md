@@ -17,12 +17,20 @@ Add/Edit a client
 
 ## Bill Model
 
-- Client (foreign key)
-- Amount (Number)
+- Project (foreign key)
 - Description (Text) -- What was the order about
 - Date Issued (DateTime) -- default value now()
 - Date Paid (DateTime) -- will be populated once Paid is _true_
 - Paid (Boolean) -- if not paid it is 'pending'
+
+---
+
+## Bill item model
+
+- ID
+- Title
+- Amount 
+- Bill ID (foreign key)
 
 ---
 
@@ -32,12 +40,20 @@ Add/Edit a client
 - Phone (String)
 - Email (String)
 - Address (String)
-  - Street Number (String)
+  - Street (String)
   - City (String)
   - Building (String)
   - Floor (String)
 - Banned (Boolean) -- default is 0
 - Warnings (foreign key)
+
+---
+
+## Project Model
+
+- ID
+- Title
+- Bill (foreign key)
 
 ---
 
@@ -69,6 +85,8 @@ Add/Edit a client
 - Phone (String)
 - isAdmin (Boolean)
 - Company Name (String)
+- Banned (default 0)
+- Activated (default 0)
 
 # Features
 
@@ -90,3 +108,4 @@ Add/Edit a client
 - Sub accounts have to be managed by the parent and they can only be activated by them
 - Clients can ask for projects and bills are per project, thus making it easier to show bill info (domain name cost, server cost, etc...)
 - Admin panel for the website owner (me) that can deactivate/delete/ban accounts for good
+- Bill Items can be edited.
