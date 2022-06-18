@@ -54,6 +54,8 @@ Add/Edit a client
 - ID
 - Title
 - Bill (foreign key)
+- Canceled (default 0)
+- Deleted (default 0)
 
 ---
 
@@ -87,6 +89,8 @@ Add/Edit a client
 - Company Name (String)
 - Banned (default 0)
 - Activated (default 0)
+- Deleted (default 0)
+
 
 # Features
 
