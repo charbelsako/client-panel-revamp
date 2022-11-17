@@ -15,13 +15,23 @@ Add/Edit a client
 
 # Models (Tables)
 
+## Payment Model
+
+- Bill Id (foreign key)
+- Amount (Number)
+- Status: Paid or Pending only (Boolean? enum?)
+
 ## Bill Model
 
 - Project (foreign key)
 - Description (Text) -- What was the order about
 - Date Issued (DateTime) -- default value now()
 - Date Paid (DateTime) -- will be populated once Paid is _true_
-- Paid (Boolean) -- if not paid it is 'pending'
+- Status (enum): 
+  - Pending
+  - Received Partial -- if full amount is received in multiple payment, will set status to Paid
+  - Paid
+- Payments (Array) -- Array consisting of payments
 
 ---
 
@@ -113,3 +123,11 @@ Add/Edit a client
 - Clients can ask for projects and bills are per project, thus making it easier to show bill info (domain name cost, server cost, etc...)
 - Admin panel for the website owner (me) that can deactivate/delete/ban accounts for good
 - Bill Items can be edited.
+- Ability to Pay a partial amount for a project, Once payments add up to bill total the referenced bill will be set to Paid
+
+
+### Could be useful
+
+- Transactional operations on DB
+- Pagination
+- ID validation plugin
